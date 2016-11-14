@@ -43,7 +43,6 @@
 #include "RenderView.h"
 #include "StyleInheritedData.h"
 #include <wtf/StackStats.h>
-#include <iostream>
 
 using namespace std;
 
@@ -644,7 +643,6 @@ void RenderTable::paint(PaintInfo& paintInfo, const LayoutPoint& paintOffset)
 
 void RenderTable::paintObject(PaintInfo& paintInfo, const LayoutPoint& paintOffset)
 {
-    std::cerr << paintInfo;
     PaintPhase paintPhase = paintInfo.phase;
     if ((paintPhase == PaintPhaseBlockBackground || paintPhase == PaintPhaseChildBlockBackground) && hasBoxDecorations() && style()->visibility() == VISIBLE)
         paintBoxDecorations(paintInfo, paintOffset);
