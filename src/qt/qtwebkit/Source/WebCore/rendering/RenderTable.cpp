@@ -43,6 +43,7 @@
 #include "RenderView.h"
 #include "StyleInheritedData.h"
 #include <wtf/StackStats.h>
+#include <iostream>
 
 using namespace std;
 
