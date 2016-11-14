@@ -680,7 +680,7 @@ void RenderTable::paintObject(PaintInfo& paintInfo, const LayoutPoint& paintOffs
         if (m_head) {
             LayoutPoint childPoint = flipForWritingModeForChild(m_head, paintOffset);
             if (!info.rect.contains(childPoint.x() + m_head->x(), childPoint.y() + m_head->y())) {
-                repaintedHeadPoint = IntPoint(childPoint.x(), info.rect.y() - m_head->y());
+                repaintedHeadPoint = IntPoint(childPoint.x(), info.rect.y() + m_head->y());
                 repaintedHead = true;
                 dynamic_cast<RenderObject*>(m_head)->paint(info, repaintedHeadPoint);
             }
